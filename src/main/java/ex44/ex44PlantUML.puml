@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class ArrayList
+{
+    int size
+    String[] products
+    String searchThis
+    int index
+    getSearchThis(): void
+    find(): int
+    getProducts(): String[]
+    setSearchThis(String searchThis): void
+}
+
+@enduml

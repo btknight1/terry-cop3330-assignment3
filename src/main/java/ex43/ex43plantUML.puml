@@ -1,0 +1,18 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Site {
+     String site_name
+     String author
+     String js_folder
+     String css_folder
+     set_directories(String site_name, String author, String js_folder, String css_folder): void
+     find(): int
+     getProducts(): String[]
+     setProducts(String str): void
+     setSearchThis(String searchThis): void
+}
+
+App <|-- set_directories
+
+@enduml

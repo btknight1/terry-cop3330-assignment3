@@ -1,0 +1,10 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Track {
+    String text
+    getText(): String
+    addString(String str): void
+    count(String text, String str): int
+}
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class ArrayList {
+    int numNames
+    getNumNames(): int
+    setNumNames(int numNames): void
+    nameCount(String fileName): int
+    sortAndOutput(): void
+}
+
+@enduml
