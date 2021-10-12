@@ -25,6 +25,7 @@ public class App
         System.out.print("Do you want a folder for CSS? ");
         mySite.setCss_folder(input.nextLine());
 
+        // Creates folders and html file
         mySite.set_directories(mySite.getSite_name(), mySite.getAuthor(), mySite.getJs_folder(), mySite.getCss_folder());
     }
 }
