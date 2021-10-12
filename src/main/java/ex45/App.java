@@ -33,7 +33,6 @@ public class App
         myText.replace("\\butilize\\b", "use");
         myText.replace("\\butilizes\\b", "use");
 
-
         String filename = "";
         System.out.print("Output file name: ");
         filename = input.nextLine();
