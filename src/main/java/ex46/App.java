@@ -3,9 +3,7 @@
  *  Copyright 2021 Brandon Terry
  */
 package ex46;
-
 import ex45.Modify;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Arrays;
@@ -16,7 +14,11 @@ public class App
 {
     public static void main(String[] args) throws FileNotFoundException
     {
+        // Create instance of Track class
         Track myText = new Track();
+
+        // Read from text file
+        // store in string
         File readFile = new File("src/main/java/ex46/exercise46_input.txt");
         Scanner input = new Scanner(readFile);
         while (input.hasNextLine())
@@ -27,6 +29,7 @@ public class App
         }
         input.close();
 
+        // Store object names in array
         Integer array[] = new Integer[3];
         String str_array[] = {"badger", "mushroom", "snake"};
 
@@ -42,13 +45,18 @@ public class App
         int max = Collections.max(Arrays.asList(array));
         int min = Collections.min(Arrays.asList(array));
 
-
+        // print correct amount of asterisks for max
         int i;
         for(i=0; i<3; i++)
         {
             if(array[i] == max)
             {
-                System.out.print(str_array[i] + ": ");
+                // add padding
+                String space = "";
+                for(int k=0; k<10-(str_array[i].length()+1); k++)
+                    space += " ";
+                System.out.print(str_array[i] + ":" + space);
+
                 for(int j=0; j<max; j++)
                 {
                     System.out.print("*");
@@ -57,14 +65,18 @@ public class App
                 break;
             }
         }
-
+        // print correct amount of asterisks for mid
         int mid =0;
         for (i=0; i<3; i++)
         {
             if(array[i] != max && array[i] != min)
             {
                 mid=i;
-                System.out.print(str_array[mid] + ": ");
+                // add padding
+                String space = "";
+                for(int k=0; k<10-(str_array[i].length()+1); k++)
+                    space += " ";
+                System.out.print(str_array[mid] + ":" + space);
                 for(int j=0; j<array[mid]; j++)
                 {
                     System.out.print("*");
@@ -73,12 +85,16 @@ public class App
                 break;
             }
         }
-
+        // print correct amount of asterisks for max
         for(i=0; i<3; i++)
         {
             if(array[i] == min)
             {
-                System.out.print(str_array[i] + ": ");
+                // add padding
+                String space = "";
+                for(int k=0; k<10-(str_array[i].length()+1); k++)
+                    space += " ";
+                System.out.print(str_array[i] + ":"+space);
                 for(int j=0; j<min; j++)
                 {
                     System.out.print("*");
